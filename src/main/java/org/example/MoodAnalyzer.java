@@ -19,15 +19,15 @@ public class MoodAnalyzer {
              if (message == null)
                  throw new MoodAnalysisException(MoodAnalysisError.NULL_MOOD, "Mood cannot be null");
              if (message.isEmpty())
-                 throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD, "Mood cannot be Empty");
+                 throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD, "Mood cannot be empty");
 
              if (message.toLowerCase().contains("sad"))
                  return "SAD";
 
              if (message.toLowerCase().contains("happy"))
                  return "Happy";
-         }catch (NullPointerException e) {
-             throw new MoodAnalysisException(MoodAnalysisError.NULL_MOOD, "Mood cannot be null");
+         }catch (NullPointerException | MoodAnalysisException e) {
+             throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD, "Mood cannot be empty");
          }
 
          return "Happy";
