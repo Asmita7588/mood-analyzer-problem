@@ -7,8 +7,7 @@ public class MoodAnalyzer {
 
     //Default Constructor
     public MoodAnalyzer(){
-        message = "SAD";
-        System.out.println(message);
+        message = "Happy";
     }
     //parameterized constructor
     public MoodAnalyzer(String message){
@@ -24,7 +23,7 @@ public class MoodAnalyzer {
              return "SAD";
 
          if(message.toLowerCase().contains("happy"))
-             return "Happy Mood";
+             return "Happy";
 
          return "Happy";
 

@@ -8,7 +8,6 @@ public class MoodAnalyserTest {
     @Test
     public void givenSadMessage_shouldReturnSad() {
         MoodAnalyzer moodAnalyser = new MoodAnalyzer();
-       // String message = "I am in sad mood";
         String result = moodAnalyser.analyseMood();
         assertEquals("SAD", result);
 
@@ -16,7 +15,7 @@ public class MoodAnalyserTest {
 
     @Test
     public void givenAnyMessage_checkForSad_shouldReturnHappy() {
-        MoodAnalyzer moodAnalyser = new MoodAnalyzer("I am in sad mood");
+        MoodAnalyzer moodAnalyser = new MoodAnalyzer();
         String result = moodAnalyser.analyseMood();
         if(result == "Happy")
             assertEquals("Happy", result);
