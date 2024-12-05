@@ -8,10 +8,9 @@ public class MoodAnalyserMain {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 
         try {
-            moodAnalyzer.analyseMood(null);
-        }catch (NullPointerException e){
-            System.out.println("Exception: " + e);
-
+            System.out.println("Mood: " +moodAnalyzer.analyseMood(""));
+        } catch (MoodAnalysisException e) {
+            System.out.println("Error: " + e.getError() + " - " + e.getMessage());
         }
 
 

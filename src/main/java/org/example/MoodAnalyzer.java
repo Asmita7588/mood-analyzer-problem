@@ -14,16 +14,21 @@ public class MoodAnalyzer {
         this.message = message;
     }
 
-     public String analyseMood(String message) {
+     public String analyseMood(String message) throws MoodAnalysisException {
+         try {
+             if (message == null)
+                 throw new MoodAnalysisException(MoodAnalysisError.NULL_MOOD, "Mood cannot be null");
+             if (message.isEmpty())
+                 throw new MoodAnalysisException(MoodAnalysisError.EMPTY_MOOD, "Mood cannot be Empty");
 
-         if(message == null)
-             return "Happy";
+             if (message.toLowerCase().contains("sad"))
+                 return "SAD";
 
-         if(message.toLowerCase().contains("sad"))
-             return "SAD";
-
-         if(message.toLowerCase().contains("happy"))
-             return "Happy";
+             if (message.toLowerCase().contains("happy"))
+                 return "Happy";
+         }catch (NullPointerException e) {
+             throw new MoodAnalysisException(MoodAnalysisError.NULL_MOOD, "Mood cannot be null");
+         }
 
          return "Happy";
 
