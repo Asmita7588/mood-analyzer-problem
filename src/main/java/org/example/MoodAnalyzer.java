@@ -14,11 +14,10 @@ public class MoodAnalyzer {
         this.message = message;
     }
 
-     public String analyseMood(String message) throws InvalidMoodException {
+     public String analyseMood(String message) {
 
-         if(message == null || message.isEmpty()) {
-             throw new InvalidMoodException("Invalid Mood ,please enter valid mood");
-         }
+         if(message == null)
+             return "Happy";
 
          if(message.toLowerCase().contains("sad"))
              return "SAD";
@@ -29,4 +28,7 @@ public class MoodAnalyzer {
          return "Happy";
 
      }
+
+
+
 }
