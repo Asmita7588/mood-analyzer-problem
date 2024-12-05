@@ -7,6 +7,7 @@ public class MoodAnalyzer {
 
     //Default Constructor
     public MoodAnalyzer(){
+        message = "SAD";
         System.out.println(message);
     }
     //parameterized constructor
