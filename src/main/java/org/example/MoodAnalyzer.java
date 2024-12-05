@@ -13,7 +13,7 @@ public class MoodAnalyzer {
          if(message.toLowerCase().contains("happy"))
              return "Happy Mood";
 
-         return "Neutral";
+         return "Happy";
 
      }
 }
