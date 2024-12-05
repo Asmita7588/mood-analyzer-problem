@@ -1,8 +1,20 @@
 package org.example;
 
-public class MoodAnalyzer {
+import java.awt.font.TextHitInfo;
 
-     public String analyseMood( String message){
+public class MoodAnalyzer {
+    private String message;
+
+    //Default Constructor
+    public MoodAnalyzer(){
+        System.out.println(message);
+    }
+    //parameterized constructor
+    public MoodAnalyzer(String message){
+        this.message = message;
+    }
+
+     public String analyseMood(){
 
          if(message == null || message.isEmpty())
              return "neutral";
