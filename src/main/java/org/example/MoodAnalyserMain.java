@@ -7,7 +7,12 @@ public class MoodAnalyserMain {
 
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 
-        System.out.println( moodAnalyzer.analyseMood());
+        try {
+            moodAnalyzer.analyseMood(null);
+        }catch (InvalidMoodException e){
+            System.out.println("Exception: " + e.getMessage());
+
+        }
 
 
     }
