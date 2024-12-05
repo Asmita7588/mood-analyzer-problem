@@ -8,7 +8,7 @@ public class MoodAnalyzer {
              return "neutral";
 
          if(message.toLowerCase().contains("sad"))
-             return "Sad Mood";
+             return "SAD";
 
          if(message.toLowerCase().contains("happy"))
              return "Happy Mood";
